@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        padding: 0;
+        margin: auto;
+      }
+      div {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #btn {
+        border: 1px solid #d3d3d3;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 1rem;
+        padding: 15px 50px;
+        background-color: #fff;
+        background-color: rgba(247, 247, 247, 0.9);
+        filter: drop-shadow(0 0.5px 1px rgb(0 0 0 / 0.1))
+          drop-shadow(0 0.5px 1px rgb(0 0 0 / 0.04));
+      }
+      #btn:disabled {
+        cursor: not-allowed;
+      }
+      a {
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 10px 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="btn">Bookmark</button>
+      <a
+        id="mainWeb"
+        href="https://uvault-phi.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >refresh this page</a
+      >
+    </div>
+    <script src="uuid.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
