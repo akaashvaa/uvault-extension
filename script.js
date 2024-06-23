@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   )
 
   btn.addEventListener('click', function () {
+    btn.disabled = true
     browser.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const tab = {
         url: tabs[0].url,
@@ -32,13 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.style.border = 'none'
         if (response?.status) {
           btn.style.backgroundColor = 'green'
-          btn.innerText = 'Added'
+          btn.innerHTML = 'Added'
         } else {
           btn.style.backgroundColor = 'red'
-          btn.innerText = 'Failed'
+          btn.innerHTML = 'Failed'
           mainWeb.style.display = 'flex'
         }
-        btn.disabled = true
         setTimeout(() => {
           btn.disabled = false
           btn.attributeStyleMap.clear()
