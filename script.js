@@ -29,13 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       browser.runtime.sendMessage({ type: 'bookmark', tab }, (response) => {
-        btn.style.color = 'white'
-        btn.style.border = 'none'
+      
         if (response?.status) {
-          btn.style.backgroundColor = 'green'
+          btn.style.background = 'linear-gradient(to bottom, #E6FFE6 0%, #CCFFCC 100%)'
           btn.innerHTML = 'Added'
         } else {
-          btn.style.backgroundColor = 'red'
+          btn.style.background = 'linear-gradient(to bottom, #FFE6E6 0%, #FFCCCC 100%)';
           btn.innerHTML = 'Failed'
           mainWeb.style.display = 'flex'
         }
